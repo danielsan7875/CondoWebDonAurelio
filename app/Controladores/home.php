@@ -3,7 +3,8 @@
 use App\Core\View;
 
 $datos = [
-    'titulo' => 'Home - CondoWeb Don Aurelio'
+    'titulo' => 'Home - CondoWeb Don Aurelio',
+    'activeModule' => 'home'
 ];
 
 

@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> <?php echo $titulo; ?> </title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -26,6 +26,20 @@
             }
         }
     </script>
+        <script>
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            // Transición suave de opacidad
+            loader.classList.add('opacity-0', 'pointer-events-none');
+            
+            // Remueve el elemento del DOM tras completar la animación (500ms)
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }
+    });
+</script>
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;

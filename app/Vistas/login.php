@@ -5,6 +5,23 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-0 md:p-6 lg:p-10">
 
+<!-- Loader -->
+<div id="app-loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white transition-opacity duration-500 opacity-100">
+    <div class="relative w-20 h-20 flex items-center justify-center">
+        <!-- SVG del Loader (basado en la imagen subida) -->
+        <svg class="w-full h-full text-black" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Anillo central grueso -->
+            <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="8" />
+
+            <!-- Arco exterior giratorio -->
+            <g class="animate-spin origin-center" style="animation-duration: 1.2s;">
+                <path d="M 50 10 A 40 40 0 0 1 90 50" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+                <path d="M 50 90 A 40 40 0 0 1 10 50" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+            </g>
+        </svg>
+    </div>
+</div>
+
     <!-- Main Container Card -->
     <div class="w-full max-w-7xl bg-white min-h-screen md:min-h-[720px] md:rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
         
