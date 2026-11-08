@@ -1,41 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realnest - Sign In</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        darkBtn: '#12171E',
-                        brandBlue: '#2563eb',
-                        subtleText: '#64748b',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        /* Gradient overlay for text readability over background image */
-        .hero-overlay {
-            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.65) 100%);
-        }
-    </style>
+    <?php include 'Complementos/head.php'; ?>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-0 md:p-6 lg:p-10">
 
@@ -57,16 +23,16 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-white">Realnest</span>
+                <span class="text-xl font-bold tracking-tight text-white">CondoWeb Don Aurelio</span>
             </div>
 
             <!-- Bottom Content -->
             <div class="relative z-10 mt-20 lg:mt-0 space-y-4">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-                    Find your sweet home
+                    Encuentra tu hogar ideal
                 </h1>
                 <p class="text-gray-200 text-sm sm:text-base font-normal max-w-md leading-relaxed">
-                    Schedule visit in just a few clicks<br/>visits in just a few clicks
+                    Gestiona tu condominio y agenda tus visitas<br/>en tan solo unos pocos clics.
                 </p>
 
                 <!-- Slider Indicators -->
@@ -83,9 +49,9 @@
             
             <!-- Top Right Sign in Toggle Button -->
             <div class="flex justify-end mb-6 lg:mb-0">
-                <button class="px-6 py-2 bg-black text-white text-sm font-semibold rounded-full hover:bg-gray-800 transition duration-200 shadow-sm">
-                    Sign in
-                </button>
+                <span class="px-6 py-2 bg-black text-white text-sm font-semibold rounded-full cursor-default select-none">
+                    Inicio de sesión
+                </span>
             </div>
 
             <!-- Main Form Wrapper -->
@@ -94,10 +60,10 @@
                 <!-- Title Header -->
                 <div class="mb-8">
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-                        Welcome Back to Realnest!
+                        Te damos la bienvenida!
                     </h2>
                     <p class="text-subtleText text-sm mt-2 font-medium">
-                        Sign in your account
+                       Ingresa tus credenciales para acceder a tu cuenta
                     </p>
                 </div>
 
@@ -107,7 +73,7 @@
                     <!-- Email Input -->
                     <div>
                         <label for="email" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
-                            Your Email
+                            Correo electrónico
                         </label>
                         <div class="relative">
                             <input 
@@ -124,7 +90,7 @@
                     <!-- Password Input -->
                     <div>
                         <label for="password" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
-                            Password
+                            constraseña
                         </label>
                         <div class="relative flex items-center">
                             <input 
@@ -146,67 +112,30 @@
                         </div>
                     </div>
 
-                    <!-- Remember Me & Forgot Password Row -->
-                    <div class="flex items-center justify-between text-xs sm:text-sm pt-1">
-                        <label class="flex items-center cursor-pointer space-x-2 select-none">
-                            <input type="checkbox" checked class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black accent-black cursor-pointer">
-                            <span class="text-gray-700 font-semibold">Remember Me</span>
-                        </label>
-                        <a href="#" class="text-gray-400 hover:text-gray-700 font-medium transition">
-                            Forgot Password?
+                    
+                    <div class="flex items-center text-xs sm:text-sm pt-1">
+                        <a href="recuperar" class="ml-auto text-gray-400 hover:text-gray-700 font-medium transition">
+                            ¿Olvidaste tu contraseña?
                         </a>
                     </div>
 
                     <!-- Submit Login Button -->
                     <div class="pt-2">
-                        <button 
-                            type="submit" 
+                        <button type="submit" 
                             class="w-full py-4 bg-darkBtn text-white font-bold rounded-xl hover:bg-black transition duration-200 shadow-md text-sm tracking-wide"
                         >
-                            Login
+                            INGRESAR
                         </button>
                     </div>
 
                 </form>
 
-                <!-- Divider -->
-                <div class="relative my-8">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-gray-200"></div>
-                    </div>
-                    <div class="relative flex justify-center text-xs">
-                        <span class="px-4 bg-white text-gray-400 font-medium">
-                            Instan Login
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Social Sign In Buttons -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <!-- Google Button -->
-                    <button type="button" class="flex items-center justify-center space-x-2 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition text-xs font-semibold text-gray-700 shadow-sm">
-                        <!-- Google SVG Icon -->
-                        <svg class="w-4 h-4" viewBox="0 0 24 24">
-                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
-                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
-                            <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
-                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
-                        </svg>
-                        <span>Continue with Google</span>
-                    </button>
-
-                    <!-- Facebook Button -->
-                    <button type="button" class="flex items-center justify-center space-x-2 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition text-xs font-semibold text-gray-700 shadow-sm">
-                        <!-- Facebook Icon -->
-                        <i class="fa-brands fa-facebook text-blue-600 text-base"></i>
-                        <span>Continue with Facebook</span>
-                    </button>
-                </div>
+                
 
                 <!-- Footer Register Link -->
                 <div class="mt-8 text-center text-xs text-gray-500 font-medium">
                     Don't have any acount? 
-                    <a href="#" class="text-brandBlue font-bold hover:underline ml-1">
+                    <a href="home" class="text-brandBlue font-bold hover:underline ml-1">
                         Register
                     </a>
                 </div>
@@ -219,22 +148,6 @@
 
     </div>
 
-    <!-- Password visibility toggle script -->
-    <script>
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('password');
-            const eyeIcon = document.getElementById('eyeIcon');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyeIcon.classList.remove('fa-eye');
-                eyeIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                eyeIcon.classList.remove('fa-eye-slash');
-                eyeIcon.classList.add('fa-eye');
-            }
-        }
-    </script>
+    <script src="public/js/login.js"> </script>
 </body>
 </html>

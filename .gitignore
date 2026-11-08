@@ -1,0 +1,15 @@
+# 1. Dependencias de Composer
+/vendor/
+
+# 2. Variables de Entorno y Credenciales
+.env
+.env.local
+.env.development
+.env.production
+
+#
+# 3. Archivos de Configuración
+.vscode/
+*.code-workspace
+composer.lock
+

@@ -1,0 +1,21 @@
+{
+    "name": "daniel/condo-web-don-aurelio",
+    "description": "Sistema MVC con PHP y Composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel E Sanchez ",
+            "email": "danielsanchezcev@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^3.0",
+        "phpmailer/phpmailer": "^6.9",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

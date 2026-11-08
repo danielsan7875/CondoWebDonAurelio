@@ -1,185 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduplex - Learning Management System Dashboard</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome 6 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        eduDark: '#191B28',
-                        eduLime: '#D4F754',
-                        eduLimeHover: '#c1e83f',
-                        eduBg: '#E7E5F4',
-                        eduCard: '#FAFAFC',
-                        eduPurpleLight: '#EEECFB',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #F7F7FA;
-        }
-        /* Custom scrollbars */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 9999px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-    </style>
+    <?php include_once 'complementos/head2.php'; ?>
 </head>
 <body class="min-h-screen bg-[#F7F7FA] text-slate-800 flex flex-col font-sans">
 
-    <!-- Fullscreen Layout Container (Full Width & Full Height) -->
-    <div class="w-full flex-1 flex flex-col lg:flex-row min-h-screen">
-        
-        <!-- Mobile Top Nav Header -->
-        <div class="lg:hidden bg-eduDark text-white p-4 flex items-center justify-between z-30 sticky top-0 shadow-md">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-full bg-eduLime text-eduDark flex items-center justify-center font-bold">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <span class="text-xl font-bold tracking-tight text-white">Eduplex</span>
-            </div>
-            <button id="mobileMenuBtn" class="text-white hover:text-eduLime focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
+    <?php include_once 'complementos/Sidebar.php'; ?>
 
-        <!-- Sidebar Navigation (Full Screen Height) -->
-        <aside id="sidebar" class="hidden lg:flex flex-col justify-between w-full lg:w-64 bg-eduDark text-slate-300 p-6 shrink-0 transition-all duration-300 z-20 min-h-screen">
-            <div>
-                <!-- Brand Logo -->
-                <div class="flex items-center space-x-3 mb-10 px-2">
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white relative">
-                        <div class="w-7 h-7 rounded-full border-2 border-eduLime flex items-center justify-center">
-                            <div class="w-2 h-2 bg-eduLime rounded-full"></div>
-                        </div>
-                    </div>
-                    <span class="text-2xl font-bold text-white tracking-tight">Eduplex</span>
-                </div>
-
-                <!-- Navigation Links -->
-                <nav class="space-y-2">
-                    <!-- Dashboard Active -->
-                    <a href="#" class="flex items-center justify-between px-4 py-3.5 rounded-2xl bg-eduLime text-eduDark font-bold shadow-md transition-all">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-border-all text-lg"></i>
-                            <span class="text-sm">Dashboard</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <i class="fa-solid fa-shield-halved text-base w-5"></i>
-                        <span class="text-sm">My Courses</span>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <i class="fa-regular fa-clipboard text-base w-5"></i>
-                        <span class="text-sm">My Classes</span>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <i class="fa-regular fa-comment-dots text-base w-5"></i>
-                        <span class="text-sm">Messages</span>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-regular fa-bell text-base w-5"></i>
-                            <span class="text-sm">Notifications</span>
-                        </div>
-                        <span class="bg-orange-500/90 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">2</span>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <i class="fa-regular fa-calendar-days text-base w-5"></i>
-                        <span class="text-sm">Calendars</span>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium">
-                        <i class="fa-solid fa-users text-base w-5"></i>
-                        <span class="text-sm">Community</span>
-                    </a>
-
-                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-2xl hover:bg-white/5 hover:text-white transition-all text-slate-400 font-medium pt-4">
-                        <i class="fa-solid fa-gear text-base w-5"></i>
-                        <span class="text-sm">Settings</span>
-                    </a>
-                </nav>
-            </div>
-
-            <!-- Download App Widget Card -->
-            <div class="mt-8 bg-eduLime rounded-3xl p-4 text-eduDark relative overflow-hidden group">
-                <div class="flex justify-end mb-2">
-                    <button class="w-8 h-8 rounded-full bg-eduDark text-white flex items-center justify-center hover:scale-105 transition">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                    </button>
-                </div>
-                <!-- Mini visual graphic lines -->
-                <div class="space-y-1 mb-4 opacity-80">
-                    <div class="w-8 h-2 bg-eduDark/20 rounded-full"></div>
-                    <div class="w-12 h-2 bg-eduDark/30 rounded-full"></div>
-                </div>
-                <!-- App download text container -->
-                <div class="bg-white/95 rounded-2xl p-3 backdrop-blur-sm">
-                    <p class="font-extrabold text-xs leading-snug">Download our<br/>mobile app</p>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Dashboard Content Area (Expands Full Width) -->
-        <main class="flex-1 p-6 sm:p-8 lg:p-10 overflow-y-auto">
-            
-            <!-- Top Header Bar -->
-            <header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-                <div>
-                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Welcome back Taylor 👋
-                    </h1>
-                </div>
-
-                <!-- Right Utility Bar -->
-                <div class="flex items-center space-x-4">
-                    <!-- Search Input -->
-                    <div class="relative w-full sm:w-64">
-                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                        <input 
-                            type="text" 
-                            placeholder="Search courses" 
-                            class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200/80 rounded-full text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300 shadow-sm"
-                        >
-                    </div>
-                    <!-- User Avatar -->
-                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-md shrink-0 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=250&auto=format&fit=crop" alt="User Avatar" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </header>
+        <?php include_once 'complementos/Nav.php'; ?>
 
             <!-- Main Layout Grid (Content Left + Sidebar Right) -->
             <div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
@@ -683,17 +511,7 @@
 
             </div>
 
-        </main>
-    </div>
 
-    <!-- Toggle Mobile Sidebar JS -->
-    <script>
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const sidebar = document.getElementById('sidebar');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('hidden');
-        });
-    </script>
+   <?php include_once 'complementos/Footer.php'; ?>
 </body>
 </html>
