@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap" rel="stylesheet">    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"IBM Plex Serif"', 'serif'],
+                        sans: ['"Noto Sans Lepcha"', 'sans-serif'],
                     },
                     colors: {
                         eduDark: '#191B28',
@@ -49,7 +48,7 @@
 
     <style>
         body {
-            font-family: 'IBM Plex Seri', serif;
+            font-family: "Noto Sans Lepcha", sans-serif;
             background-color: #F7F7FA;
         }
         /* Custom scrollbars */

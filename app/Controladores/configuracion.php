@@ -1,14 +1,17 @@
 <?php
 
 use App\Core\View;
+use App\Modelos\Configuracion; 
 
 $datos = [
-    'titulo' => 'Configuracion - CondoWeb Don Aurelio',
+    'titulo' => 'Configuración - CondoWeb',
     'activeModule' => 'configuracion'
 ];
 
+$objConfig = new Configuracion();
 
+$configuracion = $objConfig->obtenerConfiguracion();
 
-
+$datos['configuracion'] = $configuracion;
 
 View::render('configuracion', $datos);
