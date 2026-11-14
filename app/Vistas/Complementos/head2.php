@@ -19,9 +19,9 @@
                         sans: ['"Noto Sans Lepcha"', 'sans-serif'],
                     },
                     colors: {
-                        eduDark: '#191B28',
-                        eduLime: '#D4F754',
-                        eduLimeHover: '#c1e83f',
+                        eduDark: '#0A2D6B',
+                        eduLime: '#007BFF',
+                        eduLimeHover: '#0158b6',
                         eduBg: '#E7E5F4',
                         eduCard: '#FAFAFC',
                         eduPurpleLight: '#EEECFB',
